@@ -4,7 +4,7 @@ import axios from 'axios'
 export default function Weather (props) {
 
     function handleResponse (response) {
-        alert(`The weather in ${response.data.main.temp}`)
+        alert(`The weather in ${response.data.name} is ${response.data.main.temp}`)
     }
 
     let apiKey= "34ae1065362d42545661451bda2b8a1f"
