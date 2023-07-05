@@ -14,7 +14,7 @@ export default function Weather (props) {
     axios.get(apiUrl).then(handleResponse)
     return (
         <div>
-       <h3>
+       <h3 className="weather">
             Hello react weather 
        </h3>
 
@@ -27,6 +27,8 @@ export default function Weather (props) {
        wrapperClass="blocks-wrapper"
        colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
   />
+  Developed by: Hlobisile lukhele 
+  <a  href="https://github.com/HlobisileLukhele/Vanilla-Weather-App">Source Code</a>
   </div>
     )
 }
