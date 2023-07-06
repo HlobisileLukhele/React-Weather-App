@@ -1,34 +1,42 @@
 import React from 'react'
-import axios from 'axios'
-import { ColorRing } from 'react-loader-spinner'
 
 export default function Weather (props) {
+return (
+        <div  className="weather">
+            <form>
+                <div classname="col-">
+                <input type="search" placeholder="search for a city" className="form-control"
+                />
+                </div>
+               <div classname="col-3">
+               <input type="submit" value="search" className="btn btn-primary" />
+               </div> 
+            </form>
 
-    function handleResponse (response) {
-        alert(`The weather in ${response.data.name} is ${response.data.main.temp}`)
-    }
-
-    let apiKey= "34ae1065362d42545661451bda2b8a1f"
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse)
-    return (
-        <div>
-       <h3 className="weather">
-            Hello react weather 
+       <h3>
+           New York
        </h3>
+    <ul>
+        <li> Monday 12:00 </li>
+        <li> Mostly Sunny </li>
+    </ul>
 
-       <ColorRing
-       visible={true}
-       height="80"
-       width="80"
-       ariaLabel="blocks-loading"
-       wrapperStyle={{}}
-       wrapperClass="blocks-wrapper"
-       colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-  />
-  Developed by: Hlobisile lukhele 
-  <a  href="https://github.com/HlobisileLukhele/Vanilla-Weather-App">Source Code</a>
+    <div className="row">
+        <div className="col-6">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="Mostly cloudy"/>
+            6 C
+            </div>
+            <div className="col-6">
+                <li>Participation: 17%</li>
+                <li>Humidity: 75%</li>
+                <li>Wind: 13kmh</li>
+             </div>   
+
+
+    </div>
+ <p> Developed by: Hlobisile lukhele 
+  <a  href="https://github.com/HlobisileLukhele/Vanilla-Weather-App">Source Code</a></p>
   </div>
     )
 }
