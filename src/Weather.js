@@ -1,15 +1,17 @@
 import React from 'react'
 
+
 export default function Weather (props) {
 return (
-        <div  className="weather">
+        <div  className="Weather">
+           
             <form>
                 <div classname="col-">
                 <input type="search" placeholder="search for a city" className="form-control"
                 />
                 </div>
                <div classname="col-3">
-               <input type="submit" value="search" className="btn btn-primary" />
+               <input type="submit" value="search" className="btn btn-primary" w-100 />
                </div> 
             </form>
 
